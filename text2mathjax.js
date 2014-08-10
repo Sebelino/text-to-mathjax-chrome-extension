@@ -7,7 +7,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
 function mathify(text){
     return text
         .replace(/\b\w\^(\d|\w)+\b/gi, '\\($&\\)')           // A^B -> $A^B$
-        .replace(/pi/gi, '\\(\\pi\\)')                       // pi -> $\pi$
+        .replace(/\bpi\b/gi, '\\(\\pi\\)')                       // pi -> $\pi$
         .replace(/sqrt\((\d+)\)/gi, '\\(\\sqrt{$1}\\)')      // sqrt(a) -> $\sqrt{a}$
         .replace(/\)\^((\d|\w)+)/gi, ') \\(^{$1}\\)')        // )^A -> )$^A$
         .replace(/\b(\d+)\*(\d+)\b/gi, '\\($1\\cdot $2\\)')  // A*B -> $A\cdot B$
