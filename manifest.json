@@ -1,7 +1,7 @@
 {
     "content_scripts": [{
        "js": ["text2mathjax.js"],
-       "matches": ["\u003Call_urls>"]
+       "matches": ["http://www.pluggakuten.se/*"]
     }],
     "description": "Mathmodes unformatted math text using MathJax.",
     "name": "Text to MathJax",
