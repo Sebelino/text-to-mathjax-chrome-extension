@@ -1,0 +1,10 @@
+{
+    "content_scripts": [{
+       "js": ["text2mathjax.js"],
+       "matches": ["\u003Call_urls>"]
+    }],
+    "description": "Mathmodes unformatted math text using MathJax.",
+    "name": "Text to MathJax",
+    "manifest_version": 2,
+    "version": "0.1"
+}
