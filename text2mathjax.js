@@ -14,7 +14,12 @@ function mathify(text){
         ;
 }
 
-var posttags = document.getElementsByClassName('postmsg');
-for(var i = 0;i < posttags.length;i++){
-    posttags[i].innerHTML = mathify(posttags[i].innerHTML)
+var tagsets = ['postmsg','tclcon'].map(function(e){
+    return document.getElementsByClassName(e);
+});
+for(var i = 0;i < tagsets.length;i++){
+    tags = tagsets[i];
+    for(var j = 0;j < tags.length;j++){
+        tags[j].innerHTML = mathify(tags[j].innerHTML)
+    }
 }
